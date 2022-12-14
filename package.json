@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
-  "homepage": "https://arminpatel.github.io/ip-tracker-fm",
+  "homepage": "https://arminpatel.github.io/ip-tracker-fm/src/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
