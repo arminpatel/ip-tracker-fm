@@ -1,0 +1,7 @@
+const Title = ({ text }) => {
+    return (
+        <h1 className="heading"> { text } </h1>
+    )
+}
+
+export default Title;

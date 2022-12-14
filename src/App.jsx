@@ -1,9 +1,10 @@
 import { createRoot } from "react-dom/client"
+import Head from "./Head";
 
 const App = () => {
     return (
         <div>
-            <h1> Ip Address Tracker </h1>
+            <Head />
         </div>
     )
 }
