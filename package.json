@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "![Design preview for the IP address tracker coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
+  "homepage": "https://arminpatel.github.io/ip-tracker-fm",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +14,6 @@
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://arminpatel.github.io/ip-tracker-fm",
   "author": "",
   "license": "ISC",
   "devDependencies": {
