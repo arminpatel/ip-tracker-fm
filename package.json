@@ -7,10 +7,13 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "homepage": "https://arminpatel.github.io/ip-tracker-fm",
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -20,6 +23,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.8",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
     "vite": "^4.0.1"
   },
