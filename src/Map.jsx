@@ -1,7 +1,18 @@
-import { MapContainer, TileLayer, Marker } from "react-leaflet"
+import { useEffect } from "react"
+import { MapContainer, TileLayer, Marker, useMap } from "react-leaflet"
 
-const position = [51.505, -0.09]
-const Map = () => {
+const Recenter = ({position}) => {
+    const map = useMap();
+    useEffect(() => {
+        map.setView(position);
+    }, [position])
+}
+
+const Map = ({data}) => {
+        var position = [data.isp ? data.location.lat : 0,
+            data.isp ? data.location.lng : 0,
+        ]
+
     return (
         <div className="map">
             <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
@@ -10,6 +21,7 @@ const Map = () => {
                 attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             />
             <Marker position={position} />
+            <Recenter position={position} />
             </MapContainer>
         </div>
     )
