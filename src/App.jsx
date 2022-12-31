@@ -14,12 +14,22 @@ const App = () => {
         setIp(ip);
     }
 
+    const isIp = (ipOrDom) => {
+        for(let i = 0; i < ipOrDom.length; i++) {
+            if(ipOrDom[i] != '.' && !Number.isInteger(ipOrDom)) return false;
+        }
+
+        return true;
+    }
+
     useEffect(() => {
         fetchLocation(ip);
     }, [ip])
 
-    const fetchLocation = async (ip) => {
-        const res = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=at_tKTFzovuKJs1nSrPilDbGloBdPd6m&ipAddress=${ip}`, {
+    const fetchLocation = async (ipOrDom) => {
+        const endpoint = isIp(ipOrDom) ? `https://geo.ipify.org/api/v2/country,city?apiKey=at_tKTFzovuKJs1nSrPilDbGloBdPd6m&ipAddress=${ipOrDom}`
+         : `https://geo.ipify.org/api/v2/country,city?apiKey=at_tKTFzovuKJs1nSrPilDbGloBdPd6m&domain=${ipOrDom}`
+        const res = await fetch(endpoint, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
